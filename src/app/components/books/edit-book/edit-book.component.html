@@ -1,0 +1,42 @@
+<h1 class="border-bottom p-2 mb-3">Edit Books</h1>
+<div class="row">
+  <div class="col-md-6">
+    <form class="" #addBookForm="ngForm" (submit)="saveBook(addBookForm)" >
+      <div class="form-group">
+        <label>ID</label>
+        <input type="text" name="ID" #id="ngModel" class="form-control" disabled="disabled"
+        [(ngModel)]="book.ID" required>
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" name="Title" #title="ngModel" class="form-control"
+        [(ngModel)]="book.Title" required>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea name="Description" #description="ngModel" class="form-control"
+        [(ngModel)]="book.Description" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Page Count</label>
+        <input type="number" name="PageCount" #pagecount="ngModel" class="form-control"
+        [(ngModel)]="book.PageCount" required>
+      </div>
+      <div class="form-group">
+        <label>Excerpt</label>
+        <input type="text" name="Excerpt" #excerpt="ngModel" class="form-control"
+        [(ngModel)]="book.Excerpt" required>
+      </div>
+      <div class="form-group">
+        <label>Publish Date</label>
+        <input type="date" name="PublishDate" #publishdate="ngModel" class="form-control"
+        [(ngModel)]="book.PublishDate" required>
+      </div>
+
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary ml-2">Save book</button>
+        <button type="button" class="btn btn-secondary"  (click)="goBack()">Back</button>
+      </div>
+    </form>
+  </div>
+</div>
